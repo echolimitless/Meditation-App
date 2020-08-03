@@ -8,6 +8,11 @@
   </head>
   <body>
     <div class="app">
+      <div class="vid-container">
+        <video loop>
+          <source src="./video/rain.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div class="time-select">
         <button data-time="120">2 Minutes</button>
         <button data-time="300">5 Minutes</button>
@@ -19,6 +24,7 @@
         </audio>
         <img src="./svg/play.svg" alt="play" class="play" />
         <svg
+          class="track-outline"
           width="453"
           height="453"
           viewBox="0 0 453 453"
@@ -34,6 +40,7 @@
           />
         </svg>
         <svg
+          class="moving-outline"
           width="453"
           height="453"
           viewBox="0 0 453 453"
@@ -48,8 +55,16 @@
             stroke-width="20"
           />
         </svg>
+        <h3 class="time-display">0:00</h3>
       </div>
-      <div class="sound-picker"></div>
+      <div class="sound-picker">
+        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+          <img src="./svg/rain.svg" alt="rain" />
+        </button>
+        <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
+          <img src="./svg/beach.svg" alt="beach" />
+        </button>
+      </div>
     </div>
 
     <script src="./app.js"></script>
